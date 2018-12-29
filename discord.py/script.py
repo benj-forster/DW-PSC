@@ -4,7 +4,7 @@ import aiohttp
 import async_timeout
 import json
 
-dbg_token='ur_token'
+dw_token='ur_token'
 
 async def fetchPost(urlIn, d, h):
     async with aiohttp.ClientSession() as session:
@@ -13,10 +13,10 @@ async def fetchPost(urlIn, d, h):
                 session.close()
                 return response.status
 
-await postToDBG():
+await postToDW():
     headers = {
-        'Authorization': dbg_token,
+        'Authorization': dw_token,
         'Content-Type': 'application/json'
     }
     data = {"count": len(self.bot.guilds)}
-    await fetchPost("https://discordbots.group/api/bot/{}".format(botID), data, headers)
+    await fetchPost("https://discordwarehouse.io/api/bot/{}".format(botID), data, headers)
